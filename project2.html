@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>home centre</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+        <style>
+        
+             header{
+                background-color:black;
+                width: 100%;
+                text-align-last: right;
+                height: 100px;
+            }
+            header>a {
+                color:white;
+                text-decoration: none;
+                margin-right: 30px;
+                font-size: 12px;
+            }
+        
+            img{
+                position: absolute;
+                top: 2px;
+                left: 9px;
+                margin:0px ;
+            }
+            #auth-btn {
+                background-color: black;
+                color: #fff;
+                font-size: 15px;
+                padding: 10px 30px;
+                font-weight: bold;
+                border: none;
+            }
+            #auth-dropdown-content {
+                display: none;
+            }
+            .left-content {
+                position: absolute;
+                top: 60px;
+                left: 150px;
+                float: left;
+            }
+            .right-content {
+                position: absolute;
+                top: 60px;
+                left: 900px;
+                float: right;
+            }
+            #image{
+                background-color: palegreen;
+                font-size: 10px;
+            }
+            #search{
+                text-align: center;
+            }
+            body{
+                background-color:palegreen;
+            }
+            main{
+                background-color: white;
+                position:absolute;
+                top: 300px;
+                left: 450px;
+            }
+            .card{
+                display: grid;
+                grid-template-columns: 300px;
+                grid-template-rows: 150px 210px;
+                grid-template-areas: "image" "text";
+
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                border-radius: 20px;
+                background: white;
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+                position: absolute;
+                top: 0px;
+                left: 90px;
+            }
+            .card-image{
+                grid-area: image;
+                box-sizing: content-box;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                background-size: cover;
+            }
+            .card-text{
+                grid-area: text;
+                margin: 25px;
+            }
+            .card-text .date{
+                color: red;
+                font-size: 12px;
+            }
+            .card-text p{
+                color: grey;
+                font-size: 15px;
+                font-weight: 300;
+            }
+            .card-text h1{
+                margin-top: 0px;
+                font-size: 28px;
+            }
+            #name{
+                font-size: 30px;
+                position: absolute;
+                right: 100px;
+                color: #fff;
+            }
+            .down-content{
+                position: absolute;
+                top: 750px ;
+                left: 300px;
+            }
+            .container {
+                 display: grid;
+                 align-items: center; 
+                 grid-template-columns: 1fr 1fr 1fr;
+                 column-gap: 5px;
+            }
+
+            .imga {
+                max-width: 100%;
+                max-height:100%;
+            }
+
+            .text {
+               font-size: 12px;
+             }
+             .pro-content{
+                position: absolute;
+                top: 1070px;
+                left: 10px;
+             }
+             .footer-basic {
+                position: absolute;
+                top: 1300px;
+                padding:40px 0;
+                background-color:#ffffff;
+                color:#4b4c4d;
+                width: 100%;
+             }
+
+             .footer-basic ul {
+               padding:0;
+                list-style:none;
+               text-align:center;
+              font-size:18px;
+              line-height:1.6;
+              margin-bottom:0;
+            } 
+
+            .footer-basic li {
+              padding:0 10px;
+            }
+
+            .footer-basic ul a {
+               color:inherit;
+               text-decoration:none;
+                opacity:0.8;
+            }
+
+           .footer-basic ul a:hover {
+               opacity:1;
+             }
+
+            .footer-basic .social {
+                text-align:center;
+                padding-bottom:25px;
+             }
+
+              .footer-basic .social > a {
+               font-size:24px;
+                width:40px;
+                height:40px;
+                line-height:40px;
+                display:inline-block;
+                text-align:center;
+                border-radius:50%;
+                border:1px solid #ccc;
+                margin:0 8px;
+                color:inherit;
+                opacity:0.75;
+            }
+
+            .footer-basic .social > a:hover {
+                 opacity:0.9;
+            }   
+
+            .footer-basic .copyright {
+
+                  margin-top:15px;
+                text-align:center;
+                font-size:13px;
+                color:#aaa;
+                margin-bottom:0;
+            }
+
+
+        </style>
+    </head>
+    <body id="front">
+        <header>
+            <picture><img src="data:image/jpeg;base64,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" height="90x" width="120x"></picture>
+            <a href="">home</a>
+            <a href="">service</a>
+            <a href="">customer centre</a>
+            <a href="">about us</a>
+            <div id="auth-container">
+                <button id="auth-btn">SUBSCRIBE</button>
+                    <div id="auth-dropdown-content">
+                      <a href="">Login into existing account</a>
+                      <a href="">Create a new account</a>
+                     </div>
+             </div>         
+        </header>
+         <section id="image"> 
+          <div class="left-content">
+             <img srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEnOWSkyfV7IDPjRXtE2FK3c1koxHSXREjHw&usqp=CAU" width="300x" height="280x">
+          </div>
+          <div class="right-content">
+             <img src="https://images.pexels.com/photos/4652004/pexels-photo-4652004.jpeg?cs=srgb&dl=pexels-taryn-elliott-4652004.jpg&fm=jpg"  width="350x" height="400x">
+          </div>
+       </section>
+       <section id="search">
+        <b>find a new home and start new life</b>
+          <form id="search-form" method="get" action="search-results.php">
+                  <input type="search" name="search" placeholder="subscribe to search">
+                   <button><i class="bi-search"></i></button>
+          </form>
+       </section>
+       <main>
+        <pre id="name">    <strong> AN ORGANIZATION</strong>
+            <STRONG>HOME RENTALS</STRONG></pre> 
+         <div class="card">
+            <div class="card-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROB47s-PO6txCofid4WUktfqq1_BS__8j1xg&usqp=CAU"></div>
+            <div class="card-text">
+                <span class="date">4 Days ago</span>
+                <h1>home</h1>
+                <p>A good house should have proper ventilation, wire netted doors and windows, proper drainage system, many plants around it and open spaces like verandah and balconies.</p>
+            </div>
+         </div>
+         
+       </main>  
+       <main class="down-content">
+        <div class="container">
+            <div class="imga">
+              <img src="https://www.pixelstalk.net/wp-content/uploads/2016/10/Building-house-skyscraper-windows-sky-wallpapers-3840x2400.jpg" width="300x" height="300px">
+            </div>
+            <div class="text">
+              <h1>NO BORKER COMMISSION<span style="font-size: small;"></span></h1>
+              <article>In today’s fast-paced world, relocating or moving to a new place has become much simpler thanks to the convenience of online resources. Numerous sources are available to get information about new city, new home, and desirable surroundings. India has numerous platforms that cater to these needs and offer a wide range of options, from apartments and houses to villas and shared accommodations, catering to diverse budgets and preferences. This website serves as the perfect guide to help you discover the best home rental in India and find your ideal home.</article>
+            </div>
+          </div>
+       </main>
+       <main class="pro-content">
+        <table>
+            <thead>
+                <tr>
+                    <th >01----------------------------</th>
+                    <th>02---------------------------------------------------------------------------------</th>
+                    <th>03-----------------------------------</th>
+                    <th><strong>ENJOY</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><pre><h2>Subscribe</h2>
+<p>subscribe the home 
+home rental page.
+</p>                        
+                    </pre></td>
+                    <td><pre><h3>Check out the availabity</h3>
+<p>search your dream location and migrate.
+<strong>Note:no borker commission available only for registered user.</strong>
+</p>                        
+                    </pre></td>
+                    <td><pre><h4>make it your's</h4>
+<p>
+travel to your home
+</p>                        
+                    </pre></td>
+                </tr>
+            </tbody>
+        </table>
+       </main>
+    </body>
+    <div class="footer-basic">
+        <footer>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="">Home</a></li>
+                <li class="list-inline-item"><a href="">Services</a></li>
+                <li class="list-inline-item"><a href="">About</a></li>
+                <li class="list-inline-item"><a href="">Terms</a></li>
+                <li class="list-inline-item"><a href="">Privacy Policy</a></li>
+            </ul>
+            <div class="social"><a href=""><i class="bi-instagram"></i></a><a href=""><i class="bi-snapchat"></i></a><a href=""><i class="bi-twitter"></i></a><a href=""><i class="bi-facebook"></i></a></div>
+            <p class="copyright">house rental © 2023</p>
+        </footer>
+    </div>
+    </footer>
+</html>
